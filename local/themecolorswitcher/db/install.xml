@@ -1,0 +1,15 @@
+<XMLDB PATH="local/themecolorswitcher/db" VERSION="2021042800" COMMENT="XMLDB file for local/themecolorswitcher">
+    <TABLES>
+        <TABLE NAME="local_themecolorswitcher" COMMENT="Table for storing user theme color preferences">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" NEXT="userid"/>
+                <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" PREVIOUS="id" NEXT="darkmode"/>
+                <FIELD NAME="darkmode" TYPE="int" LENGTH="1" NOTNULL="true" SEQUENCE="false" PREVIOUS="userid"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+                <KEY NAME="user" TYPE="unique" FIELDS="userid"/>
+            </KEYS>
+        </TABLE>
+    </TABLES>
+</XMLDB>
